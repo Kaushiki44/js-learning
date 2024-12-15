@@ -34,3 +34,6 @@ const myFunction=function(){
 }
 console.log(typeof bigNum);// after commenting it becomes undefined
 
+
+//stack (primitive) variables ki copy banti h
+// heap (non primitive) reference dia jata h
