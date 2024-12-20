@@ -14,5 +14,25 @@ console.log(str.charAt(3));
 console.log(str.indexOf('a'));
 
 
+const s = new String ('kaushiki');
+console.log(s.substring(0,4)); //kaus
+
+const s2 = new String ('kaushiki');
+console.log(s2.slice(-8,2));//ka -- slice can include negative numbers also
+
+const s3="     kaush   "
+console.log(s3);
+console.log(s3.trim());
+
+const s4="kaushiki-is-the-best-yay-kaushiki"
+console.log(s4.replace('kaushiki','rashi'));
+
+console.log(s3.includes("rashi")); // false
+
+console.log(s4.split('-'));
+
+
+
+
 
 
