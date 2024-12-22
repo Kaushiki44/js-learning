@@ -43,8 +43,10 @@ let newDate = new Date()
 console.log(newDate.getMonth())
 //returns 11 ie dec
 console.log(newDate.getMonth() + 1)
-//12->dec
+//12->dec 
 console.log(newDate.getDay())
 //0 ->sunday
  
-
+newDate.toLocaleString('default',{
+    weekday: 'long',
+})
