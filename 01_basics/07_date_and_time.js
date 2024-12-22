@@ -29,3 +29,22 @@ const date3 = new Date("2024-01-15"); // MONTH AS 00 IS INVALID
 console.log(date3.toLocaleString());
 //1/15/2024, 12:00:00 AM
 
+let myTime = Date.now()//gives current date in miliseconds
+
+
+console.log(myTime);
+console.log(Math.floor(myTime/1000))
+// /1000 to get time in seconds instead of mili sec and floor to remove decimals
+
+console.log(date3.getTime());
+//returns milisec of the provided date from jan 1, 1970
+
+let newDate = new Date()
+console.log(newDate.getMonth())
+//returns 11 ie dec
+console.log(newDate.getMonth() + 1)
+//12->dec
+console.log(newDate.getDay())
+//0 ->sunday
+ 
+
