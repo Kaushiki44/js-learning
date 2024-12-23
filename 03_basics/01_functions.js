@@ -29,4 +29,17 @@ function message(user){
 }
 console.log(message());
 //please enter the user
-undefined
+//undefined
+
+
+//REST OPERATOR -- takes all arguments passed 
+function calculate(...num){
+    return num
+}
+console.log(calculate(200, 300, 400));//[ 200, 300, 400 ]
+
+function calc(a, b, ...num){
+    return num
+}
+console.log(calc(200, 300, 400,500, 600));  //[ 400, 500, 600 ]
+// this means a= 200 , b=300 and rest went to num
