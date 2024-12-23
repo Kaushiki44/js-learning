@@ -39,4 +39,4 @@ user.greeting();//hello user
 user.greeting2 = function(){
     console.log(`hello user, ${this.name}`);
 }
-user.greeting2();//hello user, picchasi
+user.greeting2();//hello user, picchasi 
