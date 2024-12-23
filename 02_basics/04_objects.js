@@ -75,3 +75,30 @@ console.log(Object.entries(user))
 
 console.log(user.hasOwnProperty('isLoggedIn'));//true
 console.log(user.hasOwnProperty('isLogged'));//false
+
+
+
+//OBJECT DESTRUCTURING
+const course={
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "kaushiki"
+}
+
+console.log(course.courseInstructor)  //kaushiki
+
+const {courseInstructor} = course
+console.log(courseInstructor)
+//now you dont have to write course.courseInstructor. just write courseInstructor
+
+const {courseInstructor: instructor} = course
+console.log(instructor)
+//now u dont have to write courseInstructor. just write instructor
+
+
+//JSON
+{
+    "name": "kaushiki",
+    "coursename": "js in hindi",
+    "price": "free"
+}
