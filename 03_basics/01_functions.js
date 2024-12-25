@@ -43,3 +43,39 @@ function calc(a, b, ...num){
 }
 console.log(calc(200, 300, 400,500, 600));  //[ 400, 500, 600 ]
 // this means a= 200 , b=300 and rest went to num
+
+
+
+//passing objects in a function
+
+const user={ //object
+    username: "kaushiki",
+    price: 199
+}
+
+function handleObject(anyObject)
+{//function
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`)
+   
+}
+
+// handleObject(user)
+//-> Username is kaushiki and price is 199
+// or
+handleObject({
+    username: "sam",
+    price: "200"
+})
+//--> Username is sam and price is 200
+
+
+//passing array in a function
+const arr = [10, 20, 30, 40]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(arr)); //20
+// or
+console.log(returnSecondValue([100,200,300]));//200
