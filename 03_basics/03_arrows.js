@@ -56,7 +56,7 @@ console.log(this);//{} in node environment, {} are returned
 
 
 //++++++++++++ARROW FUNCTION +++
-
+// SYNTAX: function ko hata ke () ke aage => lagado
 
 const chai= () => {
     let username= "kaushiki"
