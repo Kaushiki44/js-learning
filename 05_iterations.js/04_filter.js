@@ -17,6 +17,8 @@ console.log(values);
 
 //USING FILTER: creates a new array containing all the elements of an existing array that pass a specific condition (callback function)
 
+//Used to filter elements based on a condition and create a new array with only the matching elements.
+
 const num= [1,2,3,4,5,6,7,8]
 
 const newNums= num.filter((n) => n>4)
