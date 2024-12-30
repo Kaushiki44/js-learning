@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | CHAI & CODE</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>    
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    //returns all days
+
+    // console.log(parent.children);
+    //returns html collection
+
+    // console.log(parent.children[1]) 
+    //returns <div class="day">Tuesday</div>
+    
+    // console.log(parent.children[1].innerHTML) 
+    //returns Tuesday
+
+    //html collection pe forEach ni chalega but for loop to chala hi skte hai
+
+    for (let i = 0; i < parent.children.length; i++) {
+        
+        // console.log(parent.children[i].innerHTML);
+        
+    }
+
+    //moving from PARENT to CHILDREN
+    parent.children[1].style.color = "orange"
+
+    // console.log(parent.firstElementChild)
+    //<div class="day">Monday</div>
+    // console.log(parent.lastElementChild)
+    // <div class="day">Thursday</div>
+
+
+    //moving from CHILDREN to PARENT
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)
+     //<div class="day">Monday</div>
+     console.log(dayOne.parentElement)
+     //prints divs of all days
+     console.log(dayOne.nextElementSibling)//tues
+
+     console.log("NODES:", parent.childNodes);
+    // access all child nodes of a specified DOM element, including element nodes, text nodes, and comment nodes.
+</script>
+</html>
+
