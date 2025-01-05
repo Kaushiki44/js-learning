@@ -57,11 +57,30 @@
 // The KeyboardEvent.altKey read-only property is a boolean value that indicates if the alt key (Option or ⌥ on macOS) was pressed (true) or not (false) when the event occurred.
 // ctrlKey,shiftKey
 
+
+//event propagation determines how events travel through the DOM tree when an event occurs. It has two main phases: bubbling and capturing.
+
+// Capturing Phase (Capture or Trickle Down):
+// The event starts from the root of the DOM and propagates downwards to the target element.
+//  `true` means capturing phase
+
+// Bubbling Phase (Bubble Up):
+// The event propagates back up the DOM tree from the target to the root
+// false` (default) means bubbling phase
+
 document.getElementById('images').addEventListener('click', function(e){
     console.log("clicked inside the ul");
 },false)
-// document.getElementById('owl').addEventListener('click', function(e){
-//     console.log("clicked owl");
-// },false)
+document.getElementById('owl').addEventListener('click', function(e){
+    console.log("clicked owl");
+},false)
+//false is  bubbling 
+// so on clicking owl, first "clicked owl" is printed and then clicked inside the ul
+//when then third parameter is set to "true", "clicked inside the ul" is printed and then "clicked owl"
+
+document.getElementById('owl').addEventListener('click', function(e){
+    console.log("clicked owl");
+    e.stopPropagation();// THIS PREVENTS "clicked inside the ul" TO BE PRINTED AND ONLY "clicked owl" IS PRINTED
+},false)
 </script>
 </html>
