@@ -31,9 +31,9 @@
     // })
     // there is also a third parameter in addEventListener which is by default false
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log(e);//givesa list of things on console
-    }, false)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log(e);//givesa list of things on console
+    // }, false)
     // false is the third parameter and it is defaultily false value
 
     // The timeStamp property in JavaScript represents the time when the event was created in milisec
@@ -45,5 +45,23 @@
 
 // event.type:
 // Refers to the type of the event that was triggered (e.g., 'click', 'keydown', 'mouseenter').
+
+// The currentTarget property in JavaScript refers to the element to which the event listener is directly attached. It contrasts with target, which refers to the element that triggered the event, even if the event listener is attached to a parent or ancestor element.
+
+// screenX
+//  Represents the horizontal coordinate of the mouse pointer relative to the entire screen (including the operating system interface like the taskbar or dock).
+
+//  clientX
+//  Definition: Represents the horizontal coordinate of the mouse pointer relative to the viewable area (viewport) of the browser window (excluding scrollbars, margins, or any part of the window outside the current viewport
+
+// The KeyboardEvent.altKey read-only property is a boolean value that indicates if the alt key (Option or ⌥ on macOS) was pressed (true) or not (false) when the event occurred.
+// ctrlKey,shiftKey
+
+document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside the ul");
+},false)
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log("clicked owl");
+// },false)
 </script>
 </html>
