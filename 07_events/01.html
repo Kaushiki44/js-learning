@@ -68,19 +68,30 @@
 // The event propagates back up the DOM tree from the target to the root
 // false` (default) means bubbling phase
 
-document.getElementById('images').addEventListener('click', function(e){
-    console.log("clicked inside the ul");
-},false)
-document.getElementById('owl').addEventListener('click', function(e){
-    console.log("clicked owl");
-},false)
+// document.getElementById('images').addEventListener('click', function(e){
+//     console.log("clicked inside the ul");
+// },false)
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log("clicked owl");
+// },false)
 //false is  bubbling 
 // so on clicking owl, first "clicked owl" is printed and then clicked inside the ul
 //when then third parameter is set to "true", "clicked inside the ul" is printed and then "clicked owl"
 
-document.getElementById('owl').addEventListener('click', function(e){
-    console.log("clicked owl");
-    e.stopPropagation();// THIS PREVENTS "clicked inside the ul" TO BE PRINTED AND ONLY "clicked owl" IS PRINTED
-},false)
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log("clicked owl");
+//     e.stopPropagation();// THIS PREVENTS "clicked inside the ul" TO BE PRINTED AND ONLY "clicked owl" IS PRINTED
+// },false)
+
+// document.getElementById('google').addEventListener('click', function(e){
+//     e.preventDefault();//stops loading the google site
+//     e.stopPropagation();
+//     console.log("google clicked");
+// },false)
+
+//IF WE WANT TO REMOVE THE IMAGES AS SOON AS WE CLICK ON THEM
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.parentNode);
+}, false)
 </script>
 </html>
