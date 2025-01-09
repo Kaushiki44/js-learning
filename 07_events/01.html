@@ -83,15 +83,32 @@
 //     e.stopPropagation();// THIS PREVENTS "clicked inside the ul" TO BE PRINTED AND ONLY "clicked owl" IS PRINTED
 // },false)
 
-// document.getElementById('google').addEventListener('click', function(e){
-//     e.preventDefault();//stops loading the google site
-//     e.stopPropagation();
-//     console.log("google clicked");
-// },false)
+document.getElementById('google').addEventListener('click', function(e){
+    e.preventDefault();//stops loading the google site
+    e.stopPropagation();
+    console.log("google clicked");
+},false)
 
 //IF WE WANT TO REMOVE THE IMAGES AS SOON AS WE CLICK ON THEM
+
+// the foll code gives error
+// document.querySelector('#images').addEventListener('click', function(e){
+//     console.log(e.target.parentNode);//clicking on an img, it gives li bcs li is the parentNode of img
+//     let removeIt = e.target.parentNode;
+//     removeIt.remove();
+//     //removeIt.parentNode.removeChild(removeIt);
+//     // removeIt.parentNode gives ul aur ul ka child remove krna h (jo si img pe click kia)
+// }, false)
+
+//error comes up that whenever we click on a bullet point , the whole page content gets deleted bcz it takes the parent node of the li
+
+//better way
 document.querySelector('#images').addEventListener('click', function(e){
-    console.log(e.target.parentNode);
-}, false)
+    if(e.target.tagName ==='IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()    }
+})
+
 </script>
 </html>
