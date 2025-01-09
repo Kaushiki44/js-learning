@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        chai aur code
+    </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //prints kaushiki in console after 2s
+    setTimeout(function(){
+        console.log("kaushiki")
+    }, 2000)
+
+    //OR
+
+    // const sayName= function(){
+    //     console.log('Kaushiki')
+    // }
+    // setTimeout(sayName, 2000) -- PASS THE REFERENCE OF FUNCTION
+
+
+    //TO CHANGE THE HEADING AFTER 2SEC
+    const changeHeading = function(){
+        document.querySelector('h1').innerHTML='best person'
+    }
+    // setTimeout(changeHeading, 2000)
+    const changeMe = setTimeout(changeHeading, 2000)
+
+    //if we click on the stop button, heading will not change
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("Stop")
+    })
+</script>
+</html>
