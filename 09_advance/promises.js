@@ -80,3 +80,32 @@ promiseFour
 // { username: 'Kaushiki', password: '123' }
 // Kaushiki
 // the promise is either resolved or rejected
+
+
+//OR
+//ASYNC AWAIT
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+    if(!error){
+        resolve({username: "rashi", password: "123"})
+    }
+    else{
+        reject("Error: everything went wrong")
+    }
+    },1000)
+})
+async function consumePromiseFive(){
+    try{
+        const response = await promiseFive
+        console.log(response);
+        //gets executed when error= false
+        // { username: 'rashi', password: '123' }
+    }
+    catch(error){
+        console.log(error);
+        // gets executed when error= true
+        //Error: everything went wrong
+    }
+}
+consumePromiseFive();
