@@ -136,3 +136,13 @@ async function getAllUser(){
 }
 getAllUser();
 // user data is printed from the  api link
+
+//OR
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) =>{
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
