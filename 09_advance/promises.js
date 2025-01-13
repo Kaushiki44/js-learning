@@ -109,3 +109,30 @@ async function consumePromiseFive(){
     }
 }
 consumePromiseFive();
+
+
+
+// The .json() method is a function available on the Response object in JavaScript, typically used in conjunction with the fetch() API.
+
+// The .json() method parses the JSON-encoded string in the response body and transforms it into a JavaScript object. Since parsing JSON is an asynchronous operation (as the data might take some time to arrive), .json() returns a Promise.
+
+// Returns a Promise: Since .json() involves reading and parsing a stream, it returns a promise. Always handle it asynchronously with await or .then().
+
+async function getAllUser(){
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users') 
+
+        //console.log(response);
+        //prints data in json string format which os tough to read
+
+        // TO MAKE RESPONSE IN A READABLE FORMAT, WE CONVERT THE JSON STRING TO JS OBJECT USING .json()
+        // AND SINCE THIS CONVERSION TAKES TIME, WE PUT IT INTO "AWAIT"
+
+        const data = await response.json()
+        console.log(data);
+    } catch (error) {
+        console.log("E:", error)
+    }
+}
+getAllUser();
+// user data is printed from the  api link
