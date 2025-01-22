@@ -1,3 +1,5 @@
+//SUPER: it is alternative & a better option to call(this, )
+//The super keyword in JavaScript is used to call functions or access properties of a parent class (or superclass) from within a subclass (or derived class).
 class User{
     constructor(username){
         this.username = username
