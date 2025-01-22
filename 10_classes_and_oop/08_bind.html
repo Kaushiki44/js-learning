@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+    const app = new React()
+//     this.handleClick refers to the handleClick method of the class instance.
+// Without this, JavaScript thinks you are referring to a standalone function or variable, but there is no global handleClick function declared.
+// Without proper binding, the this context in handleClick will refer to the event handler's context, not the class. Without proper binding,if you use this.handleClick directly, it points to the instance method, but the this context might be lost when the event is triggered unless the method is properly bound to the class instance.
+</script>
+</html>
